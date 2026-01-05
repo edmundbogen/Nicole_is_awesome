@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coco's Paw-fect Walks | South Florida Dog Walking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a3e5c 0%, #0d2a40 100%);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            padding: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00a8e1;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #00a8e1;
+            color: white;
+            padding: 18px 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #0090c4;
+        }
+
+        .paw-prints {
+            position: absolute;
+            font-size: 4rem;
+            opacity: 0.1;
+            color: white;
+        }
+
+        .paw-1 { top: 10%; left: 10%; transform: rotate(-20deg); }
+        .paw-2 { top: 30%; right: 15%; transform: rotate(15deg); }
+        .paw-3 { bottom: 20%; left: 20%; transform: rotate(-10deg); }
+        .paw-4 { bottom: 30%; right: 10%; transform: rotate(25deg); }
+
+        /* About Section */
+        .about {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(26, 62, 92, 0.2);
+        }
+
+        .accent-bar {
+            position: absolute;
+            left: -20px;
+            top: 40px;
+            bottom: 40px;
+            width: 5px;
+            background: #00a8e1;
+        }
+
+        .about-content h2 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #1a3e5c;
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 20px;
+            background: #f4f4f4;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #1a3e5c;
+        }
+
+        .section-header p {
+            color: #00a8e1;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(26, 62, 92, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1a3e5c;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 20px;
+            background: #1a3e5c;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d2a40;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .footer-note {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+            font-style: italic;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .accent-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="paw-prints paw-1">🐾</div>
+        <div class="paw-prints paw-2">🐾</div>
+        <div class="paw-prints paw-3">🐾</div>
+        <div class="paw-prints paw-4">🐾</div>
+
+        <div class="hero-content">
+            <h1>Coco's <span>Paw-fect</span> Walks</h1>
+            <p class="tagline">Premium Dog Walking Services in South Florida</p>
+            <a href="#contact" class="cta-button">Book a Walk Today</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="accent-bar"></div>
+                    <img src="coco.png" alt="Coco the Goldendoodle - Our Chief Walking Officer">
+                </div>
+                <div class="about-content">
+                    <h2>Meet Our Chief Walking Officer</h2>
+                    <p>This is Coco, our fluffy inspiration and the reason we started Coco's Paw-fect Walks. With her boundless energy and love for adventure, she taught us that every dog deserves tail-wagging walks filled with sniffs, sunshine, and the occasional squirrel chase.</p>
+                    <p>From Palm Beach to Miami, we bring the same joy and dedication to every pup we walk. Because at Coco's Paw-fect Walks, your fur baby becomes part of our pack.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Tail-wagging adventures for every pup</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🦮</div>
+                    <h3>Daily Walks</h3>
+                    <p>30 or 60-minute walks tailored to your dog's energy level. Rain or shine, we show up with treats and enthusiasm.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏖️</div>
+                    <h3>Beach Adventures</h3>
+                    <p>Let your pup splash in the waves and dig in the sand. Our beach excursions are the ultimate South Florida experience.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🐕‍🦺</div>
+                    <h3>Pack Walks</h3>
+                    <p>Socialization at its finest! Your dog joins a small group of furry friends for supervised playtime and exercise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <h2>Ready for Paw-fect Walks?</h2>
+        <p>Let us take your furry friend on adventures they'll dream about. First walk is on us!</p>
+        <a href="mailto:woof@cocopawfectwalks.fake" class="cta-button">Contact Us Today</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Coco's Paw-fect Walks | South Florida's Happiest Dog Walking Service</p>
+        <p class="footer-note">This is a fictitious demonstration website. No actual dog walking services are offered. Brand styling inspired by Edmund Bogen Team guidelines.</p>
+    </footer>
+</body>
+</html>
