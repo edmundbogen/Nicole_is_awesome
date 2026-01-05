@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coco's Paw-fect Walks | South Florida Dog Walking</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Calligraphy font for headers, Lato for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@1&family=Lato:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,8 +14,8 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            color: #333333;
+            font-family: 'Lato', sans-serif;
+            color: #3d3d3d;
             line-height: 1.6;
         }
 
@@ -26,7 +27,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #1a3e5c 0%, #0d2a40 100%);
+            background: linear-gradient(135deg, #e8a4b8 0%, #b85c7a 100%);
             overflow: hidden;
         }
 
@@ -38,28 +39,25 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 300;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            font-weight: 400;
             margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #00a8e1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         .tagline {
-            font-size: 1.4rem;
-            font-weight: 300;
+            font-family: 'Lato', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 400;
             letter-spacing: 0.05em;
             margin-bottom: 40px;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .cta-button {
             display: inline-block;
-            background: #00a8e1;
+            background: #b85c7a;
             color: white;
             padding: 18px 50px;
             text-decoration: none;
@@ -67,17 +65,20 @@
             letter-spacing: 0.1em;
             font-weight: 500;
             font-size: 0.9rem;
-            transition: background 0.3s ease;
+            border-radius: 6px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(184, 92, 122, 0.3);
         }
 
         .cta-button:hover {
-            background: #0090c4;
+            background: #a04d6a;
+            transform: translateY(-2px);
         }
 
         .paw-prints {
             position: absolute;
             font-size: 4rem;
-            opacity: 0.1;
+            opacity: 0.15;
             color: white;
         }
 
@@ -89,7 +90,7 @@
         /* About Section */
         .about {
             padding: 100px 20px;
-            background: white;
+            background: #fdf0f3;
         }
 
         .container {
@@ -110,8 +111,8 @@
 
         .about-image img {
             width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 20px 60px rgba(26, 62, 92, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(184, 92, 122, 0.2);
         }
 
         .accent-bar {
@@ -120,15 +121,15 @@
             top: 40px;
             bottom: 40px;
             width: 5px;
-            background: #00a8e1;
+            background: #b85c7a;
+            border-radius: 3px;
         }
 
         .about-content h2 {
-            font-size: 2.2rem;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #1a3e5c;
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            font-weight: 400;
+            color: #b85c7a;
             margin-bottom: 25px;
         }
 
@@ -136,13 +137,13 @@
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 20px;
-            color: #555;
+            color: #3d3d3d;
         }
 
         /* Services Section */
         .services {
             padding: 100px 20px;
-            background: #f4f4f4;
+            background: white;
         }
 
         .section-header {
@@ -151,17 +152,18 @@
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #1a3e5c;
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: #b85c7a;
         }
 
         .section-header p {
-            color: #00a8e1;
+            font-family: 'Lato', sans-serif;
+            color: #e8a4b8;
             font-size: 1.1rem;
             margin-top: 10px;
+            font-weight: 500;
         }
 
         .services-grid {
@@ -171,15 +173,16 @@
         }
 
         .service-card {
-            background: white;
+            background: #fdf0f3;
             padding: 40px 30px;
             text-align: center;
+            border-radius: 12px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(26, 62, 92, 0.15);
+            box-shadow: 0 20px 40px rgba(184, 92, 122, 0.15);
         }
 
         .service-icon {
@@ -188,16 +191,16 @@
         }
 
         .service-card h3 {
-            font-size: 1.2rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #1a3e5c;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #b85c7a;
             margin-bottom: 15px;
         }
 
         .service-card p {
-            color: #666;
+            color: #3d3d3d;
             font-size: 0.95rem;
             line-height: 1.7;
         }
@@ -205,22 +208,22 @@
         /* CTA Section */
         .cta-section {
             padding: 100px 20px;
-            background: #1a3e5c;
+            background: linear-gradient(135deg, #e8a4b8 0%, #c9a4a9 100%);
             text-align: center;
             color: white;
         }
 
         .cta-section h2 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            font-weight: 400;
             margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         }
 
         .cta-section p {
             font-size: 1.2rem;
-            opacity: 0.9;
+            opacity: 0.95;
             margin-bottom: 40px;
             max-width: 600px;
             margin-left: auto;
@@ -229,28 +232,35 @@
 
         /* Footer */
         footer {
-            background: #0d2a40;
+            background: #b85c7a;
             color: white;
             padding: 40px 20px;
             text-align: center;
         }
 
         footer p {
-            opacity: 0.7;
+            opacity: 0.9;
             font-size: 0.9rem;
         }
 
         .footer-note {
             margin-top: 15px;
             font-size: 0.8rem;
-            opacity: 0.5;
+            opacity: 0.7;
             font-style: italic;
+        }
+
+        /* Decorative hearts */
+        .heart-decoration {
+            color: rgba(255,255,255,0.2);
+            font-size: 1.5rem;
+            margin: 0 10px;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 3rem;
             }
 
             .about-grid {
@@ -264,6 +274,12 @@
             .accent-bar {
                 display: none;
             }
+
+            .about-content h2,
+            .section-header h2,
+            .cta-section h2 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
@@ -276,7 +292,7 @@
         <div class="paw-prints paw-4">🐾</div>
 
         <div class="hero-content">
-            <h1>Coco's <span>Paw-fect</span> Walks</h1>
+            <h1>Coco's Paw-fect Walks</h1>
             <p class="tagline">Premium Dog Walking Services in South Florida</p>
             <a href="https://bogenhomes.com/agents/nicole-hudson/" class="cta-button">Book a Walk Today</a>
         </div>
@@ -335,8 +351,12 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Coco's Paw-fect Walks | South Florida's Happiest Dog Walking Service</p>
-        <p class="footer-note">This is a fictitious demonstration website. No actual dog walking services are offered. Brand styling inspired by Edmund Bogen Team guidelines.</p>
+        <p>
+            <span class="heart-decoration">♥</span>
+            Coco's Paw-fect Walks | South Florida's Happiest Dog Walking Service
+            <span class="heart-decoration">♥</span>
+        </p>
+        <p class="footer-note">This is a fictitious demonstration website. No actual dog walking services are offered. Brand styling by Nicole Brand Demo guidelines.</p>
     </footer>
 </body>
 </html>
