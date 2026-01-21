@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposed Place of Worship on Clint Moore Road: Zoning, Traffic, and Land-Use Considerations | The Edmund Bogen Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background-color: #ffffff;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: #1a3e5c;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00a8e1;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(26, 62, 92, 0.5) 0%, rgba(26, 62, 92, 0.85) 70%, rgba(26, 62, 92, 0.95) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 60px;
+        }
+
+        .article-category {
+            color: #00a8e1;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-title {
+            color: #ffffff;
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            max-width: 900px;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .article-meta {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .article-meta span {
+            margin-right: 20px;
+        }
+
+        /* Main Content */
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        /* Key Stats Section */
+        .key-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+            border-left: 3px solid #00a8e1;
+            background-color: #ffffff;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 300;
+            color: #1a3e5c;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #666;
+        }
+
+        /* Article Content */
+        .article-content h2 {
+            font-size: 28px;
+            font-weight: 300;
+            color: #1a3e5c;
+            letter-spacing: 1px;
+            margin: 50px 0 25px 0;
+            text-transform: uppercase;
+        }
+
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .article-content p:first-of-type {
+            font-size: 20px;
+            color: #1a3e5c;
+            font-weight: 400;
+        }
+
+        /* Pull Quote */
+        .pull-quote {
+            border-left: 4px solid #00a8e1;
+            padding: 30px 40px;
+            margin: 40px 0;
+            background-color: #f8f9fa;
+        }
+
+        .pull-quote p {
+            font-size: 22px;
+            font-weight: 300;
+            font-style: italic;
+            color: #1a3e5c;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .pull-quote cite {
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+            font-style: normal;
+        }
+
+        /* Data Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+
+        .data-table th {
+            background-color: #1a3e5c;
+            color: #ffffff;
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .data-table td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #e8e8e8;
+            font-size: 15px;
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* Info Box */
+        .info-box {
+            background-color: #1a3e5c;
+            color: #ffffff;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .info-box h3 {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #00a8e1;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-box li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .info-box li:last-child {
+            border-bottom: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1a3e5c 0%, #2a5a7c 100%);
+            padding: 60px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .cta-section h3 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #00a8e1;
+            color: #ffffff;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0090c4;
+        }
+
+        /* Author Bio */
+        .author-bio {
+            display: flex;
+            gap: 40px;
+            padding: 50px;
+            background-color: #f4f4f4;
+            margin-top: 60px;
+        }
+
+        .author-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 0;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info h3 {
+            font-size: 24px;
+            font-weight: 300;
+            color: #1a3e5c;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .author-title {
+            font-size: 14px;
+            color: #00a8e1;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .author-info p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .author-contact {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .author-contact a {
+            color: #1a3e5c;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .author-contact a:hover {
+            color: #00a8e1;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1a3e5c;
+            color: #ffffff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .footer-disclaimer {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh;
+            }
+
+            .hero-overlay {
+                padding: 30px;
+            }
+
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .content-wrapper {
+                padding: 40px 20px;
+            }
+
+            .key-stats {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .author-bio {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .author-image {
+                margin: 0 auto;
+            }
+
+            .author-contact {
+                justify-content: center;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .cta-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="https://bogenhomes.com" class="nav-logo">The Edmund Bogen Team</a>
+        <div class="nav-links">
+            <a href="https://bogenhomes.com/properties">Properties</a>
+            <a href="https://bogenhomes.com/contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="hero-image.png" alt="Community celebration in West Boca Raton" class="hero-image">
+        <div class="hero-overlay">
+            <span class="article-category">Land Use Analysis</span>
+            <h1 class="hero-title">Proposed Place of Worship on Clint Moore Road: Zoning, Traffic, and Land-Use Considerations</h1>
+            <div class="article-meta">
+                <span>By Edmund Bogen</span>
+                <span>January 21, 2026</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <!-- Key Stats -->
+        <div class="key-stats">
+            <div class="stat-card">
+                <div class="stat-number">246</div>
+                <div class="stat-label">Proposed Seats</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2.77</div>
+                <div class="stat-label">Acres</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">Minimal</div>
+                <div class="stat-label">Typical Saturday Traffic</div>
+            </div>
+        </div>
+
+        <!-- Article Content -->
+        <article class="article-content">
+            <p>A proposed place of worship on Clint Moore Road—near St. Andrew's Country Club, the Polo Club, and Woodfield—is currently under review by Palm Beach County. This article summarizes publicly available information regarding the zoning application, variance history, traffic engineering considerations, and applicable land-use regulations. This analysis is provided solely for general informational purposes regarding land use and infrastructure and is not intended to guide housing choices, influence buyer or seller decisions, or characterize neighborhood desirability.</p>
+
+            <h2>The Development Overview</h2>
+
+            <p>The Chabad Chai Center (Application ZV-2023-00375) proposes a 246-seat place of worship on a 2.77-acre vacant parcel on the north side of Clint Moore Road, approximately 0.3 miles east of Wagon Wheel Drive. The site sits in unincorporated Palm Beach County, where places of worship are permitted uses by right in most zoning districts under the 2009 ULDC amendments.</p>
+
+            <p>The property's history shapes its current development constraints. In 2002, the northern portion of the original platted lots was acquired through eminent domain to accommodate Clint Moore Road expansion and drainage requirements. This historical taking created the geometric configuration that now requires variance requests for reduced lot size, depth, and rear setback from 100 feet to 60 feet.</p>
+
+            <p>The Palm Beach County Zoning Commission denied the variance in November 2023, citing the "self-imposed hardship" doctrine—noting that the current owner acquired the land after the eminent domain action and that potential lot unification with adjacent parcels owned by the same entity could resolve the dimensional constraints without requiring variances.</p>
+
+            <h2>Traffic Considerations</h2>
+
+            <p>Traffic patterns associated with places of worship vary based on the type of facility and religious observance practices. Orthodox synagogues have historically exhibited different traffic profiles than other houses of worship due to religious observance requirements.</p>
+
+            <table class="data-table">
+                <tr>
+                    <th>Time Period</th>
+                    <th>Orthodox Synagogue (Typical)</th>
+                    <th>Other Houses of Worship</th>
+                </tr>
+                <tr>
+                    <td>Saturday Morning</td>
+                    <td>Historically minimal (walking observance)</td>
+                    <td>Often peak parking demand</td>
+                </tr>
+                <tr>
+                    <td>Daily Services</td>
+                    <td>Typically 5-10 vehicles</td>
+                    <td>Varies</td>
+                </tr>
+                <tr>
+                    <td>Weekday Events</td>
+                    <td>Moderate (lifecycle events)</td>
+                    <td>Similar</td>
+                </tr>
+            </table>
+
+            <p>Orthodox Jewish observance traditionally prohibits driving on Shabbat, which has historically resulted in congregants walking to Saturday services at similar facilities. A case study of a 30-family Orthodox congregation in Dallas documented approximately 5-6 vehicles present at any given time during typical operations, as Shabbat attendance arrived on foot. Actual traffic patterns for any specific facility depend on site-specific conditions and operational characteristics subject to county review.</p>
+
+            <p>Current traffic on Clint Moore Road ranges from 16,971 to 32,385 average annual daily trips depending on segment, with peak-hour volumes of approximately 3,017 vehicles between Jog Road and Military Trail. The actual traffic contribution of any proposed facility would be subject to site-specific traffic studies and county review during the approval process.</p>
+
+            <p>Traffic considerations for weekday programs and events are typically addressed through municipal coordination mechanisms such as dedicated turn lanes, staggered scheduling, and event-specific traffic management plans. Palm Beach County routinely conditions approvals on such mitigations as part of the site plan review process.</p>
+
+            <h2>Academic Research on Religious Institutions and Property Values</h2>
+
+            <p>Academic literature has examined the relationship between religious institutions and surrounding property values. The studies referenced below address aggregate trends and do not establish causal relationships for any specific property, neighborhood, or buyer profile.</p>
+
+            <p>Thompson et al. (2012, Contemporary Economic Policy) examined a newly built Mormon temple in Omaha using pre- and post-treatment hedonic pricing models. The study concluded: "We do not find that the religious structure influenced the value of surrounding properties."</p>
+
+            <p>A Hamburg study of 4,832 condominium listings found properties 109-219 yards from religious buildings listed for 4.8% more than comparable homes—an effect observed across churches, mosques, and temples. These studies address aggregate trends and do not establish causal relationships for any specific property, neighborhood, or buyer profile.</p>
+
+            <h2>Zoning and Legal Framework</h2>
+
+            <p>Palm Beach County zoning permits places of worship by right in most districts, with standard requirements including one parking space per three sanctuary seats, 25-foot front setbacks, and 25-30 foot maximum height.</p>
+
+            <div class="info-box">
+                <h3>Applicable Federal Law</h3>
+                <ul>
+                    <li>Religious Land Use and Institutionalized Persons Act (RLUIPA) establishes standards for equal treatment of religious assemblies with secular assemblies</li>
+                    <li>11th Circuit Court addressed RLUIPA standards in Gagliardi v. City of Boca Raton (2018)</li>
+                    <li>Courts have held that zoning denials must be based on technical grounds applicable to all similar uses</li>
+                    <li>The November 2023 variance denial was issued "without prejudice," allowing for resubmission</li>
+                </ul>
+            </div>
+
+            <p>In Gagliardi v. City of Boca Raton, the 11th Circuit Court addressed claims related to a synagogue approval. The court's analysis focused on whether the complaints raised constituted particularized injuries under applicable standing requirements. The case illustrates the judicial standards applied to land-use decisions involving religious institutions.</p>
+
+            <h2>Regional Context</h2>
+
+            <p>The Boca Raton area includes a variety of existing religious institutions consistent with its role as a regional population center.</p>
+
+            <h2>Land-Use Process Considerations</h2>
+
+            <p>The current variance denial means the applicant must either consolidate parcels to meet dimensional requirements or pursue alternative site configurations. This process may unfold over an extended period, with opportunities for public input through Palm Beach County's quasi-judicial zoning process.</p>
+
+            <p>Interested parties may monitor the application status through Palm Beach County's Planning, Zoning and Building Department public records. Traffic studies, site plans, and variance applications are subject to public review during the approval process.</p>
+
+            <h2>Fair Housing Compliance</h2>
+
+            <p>Religion is explicitly protected under the federal Fair Housing Act (42 U.S.C. §§ 3601-3631) and Florida Statutes 760.20-760.37. This legal framework prohibits:</p>
+
+            <div class="info-box">
+                <h3>Fair Housing Requirements</h3>
+                <ul>
+                    <li>Making housing decisions based on religious composition of neighborhoods</li>
+                    <li>Steering buyers toward or away from areas based on religious demographics</li>
+                    <li>Providing different service levels based on religious affiliation</li>
+                    <li>Discussing religious factors to influence real estate decisions</li>
+                </ul>
+            </div>
+
+            <p>Florida law states: "It is unlawful to discriminate in land use decisions or in the permitting of development based on...religion" (§760.26). Nothing in this article is intended to encourage or discourage residence in any area based on religious presence or absence.</p>
+
+            <p>This article is limited to publicly available zoning, traffic, and land-use information. It does not advocate for or against this or any development application, and it does not provide guidance on housing selection or real estate transactions.</p>
+        </article>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>Additional Resources</h3>
+            <p>For information about this zoning application, contact Palm Beach County Planning, Zoning and Building Department. For legal guidance on land-use matters, consult qualified legal counsel.</p>
+            <a href="https://discover.pbcgov.org/pzb/" class="cta-button">Palm Beach County PZB</a>
+        </div>
+
+        <!-- Final Disclaimer -->
+        <div style="background-color: #f4f4f4; padding: 30px; margin-top: 40px; border-left: 4px solid #1a3e5c;">
+            <p style="font-size: 14px; color: #555; line-height: 1.7; margin: 0;">This article discusses publicly available zoning and infrastructure information. It does not evaluate neighborhood demographics, religious composition, or buyer preferences and should not be used as a basis for housing selection or real estate decision-making.</p>
+        </div>
+
+        <!-- Author Bio -->
+        <div class="author-bio">
+            <img src="hero-image.png" alt="Edmund Bogen" class="author-image">
+            <div class="author-info">
+                <h3>Edmund Bogen</h3>
+                <p class="author-title">Luxury Real Estate Specialist | Douglas Elliman</p>
+                <p>Edmund Bogen leads The Edmund Bogen Team at Douglas Elliman, specializing in luxury properties throughout South Florida's most prestigious communities including St. Andrew's Country Club, The Polo Club, and Boca West. With deep expertise in the West Boca Raton market, Edmund provides clients with data-driven insights and white-glove service for their most significant real estate decisions.</p>
+                <p>A recognized authority on South Florida luxury real estate, Edmund hosts Edmund's Mastermind—a community of over 14,000 real estate professionals dedicated to excellence in the industry.</p>
+                <div class="author-contact">
+                    <a href="tel:561-235-7575">561-235-7575</a>
+                    <a href="mailto:edmund@bogenhomes.com">edmund@bogenhomes.com</a>
+                    <a href="https://bogenhomes.com">bogenhomes.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-brand">The Edmund Bogen Team | Douglas Elliman</div>
+        <p class="footer-disclaimer">© 2026 The Edmund Bogen Team. All rights reserved. Douglas Elliman Real Estate. Equal Housing Opportunity. This article is provided for general informational purposes only regarding publicly available land-use records and should not be construed as legal, financial, or professional advice, nor as guidance for housing selection or real estate decision-making. All real estate transactions are subject to applicable laws and regulations including the Fair Housing Act.</p>
+    </footer>
+</body>
+</html>
