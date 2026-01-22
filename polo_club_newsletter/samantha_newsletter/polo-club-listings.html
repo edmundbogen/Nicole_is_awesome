@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Polo Club Active Listings - Samantha Gornstein</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a3e5c 0%, #2c5f8d 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #e6f2ff;
+            margin-bottom: 5px;
+        }
+
+        .header .date {
+            font-size: 14px;
+            color: #b3d9ff;
+        }
+
+        .intro {
+            padding: 30px 40px;
+            background-color: #f8fbff;
+            border-bottom: 3px solid #4169E1;
+        }
+
+        .intro h2 {
+            color: #1a3e5c;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .listings-container {
+            padding: 40px;
+        }
+
+        .listing-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        .listing-card:hover {
+            border-color: #4169E1;
+            box-shadow: 0 5px 20px rgba(65, 105, 225, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .listing-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4169E1;
+        }
+
+        .status {
+            background-color: #28a745;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .address {
+            font-size: 18px;
+            color: #1a3e5c;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            font-size: 16px;
+            color: #1a3e5c;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #1a3e5c 0%, #2c5f8d 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .contact-buttons {
+            margin-top: 20px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: #4169E1;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            margin: 5px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #00a8e1;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(65, 105, 225, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .listings-container {
+                padding: 20px;
+            }
+
+            .listing-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .status {
+                margin-top: 10px;
+            }
+
+            .details {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>THE POLO CLUB</h1>
+            <p>Active Luxury Listings</p>
+            <p class="date">Market Data as of January 22, 2026</p>
+        </div>
+
+        <div class="intro">
+            <h2>16 Active Listings | $559K - $8.6M</h2>
+            <p>Discover exceptional properties in The Polo Club, one of Palm Beach County's most prestigious communities. From elegant condominiums to stunning waterfront estates, The Polo Club offers unparalleled luxury living in Boca Raton and Delray Beach.</p>
+        </div>
+
+        <div class="listings-container">
+
+            <!-- Listing 1 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$559,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">5100 Lake Catalina Drive C, Boca Raton, FL 33496</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">3</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">2</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">2,107</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Catalina</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11139065</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 2 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$599,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">5070 Lake Catalina Drive C, Boca Raton, FL 33496</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">3</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">2</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">1,751</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Catalina</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11152072</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 3 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$629,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">5184 Lake Catalina Drive D, Boca Raton, FL 33496</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">3</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">2</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">1,760</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Windsor Parke</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11100001</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 4 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$730,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">5158 Windsor Parke Drive, Boca Raton, FL 33496</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">3</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">2</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">1,760</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Windsor Parke</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11100001</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 5 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$799,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">5154 Lake Catalina Drive A, Boca Raton, FL 33496</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">3</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">2</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">1,837</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Catalina</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11155577</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 6 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$849,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">6229 Graycliff Drive A, Boca Raton, FL 33496</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">3</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">3</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">2,008</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Coquina Isle</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11154415</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 7 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$899,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">17557 Ashbourne B Way B, Boca Raton, FL 33496</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">3</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">2</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">2,328</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Ashbourne</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11104893</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 8 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$1,149,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">5174 Windsor Parke Drive, Boca Raton, FL 33496</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">3</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">3</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">2,317</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Windsor Parke</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11149398</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 9 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$1,799,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">6468 Polo Pointe Way, Delray Beach, FL 33484</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">4</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">3</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">3,202</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Crystal Bay</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11148746</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 10 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$3,495,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">5239 Suffolk Drive, Boca Raton, FL 33496</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">5</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">5</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">4,205</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Manchester</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11155576</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 11 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$4,299,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">16283 Vintage Oaks Lane, Delray Beach, FL 33484</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">4</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">5</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">5,222</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Vintage Oaks</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11115928</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 12 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$4,400,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">5752 Vintage Oaks Circle, Delray Beach, FL 33484</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">4</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">5</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Sq Ft</div>
+                        <div class="detail-value">5,774</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Vintage Oaks</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11148998</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 13 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$4,799,999</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">Vintage Oaks Lane, Delray Beach, FL 33484</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Vintage Oaks</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 14 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$7,775,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">16600 Senterra Drive, Delray Beach, FL 33484</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Royal Hidden Cove</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 15 -->
+            <div class="listing-card">
+                <div class="listing-header">
+                    <div class="price">$8,600,000</div>
+                    <div class="status">ACTIVE</div>
+                </div>
+                <div class="address">16600 Senterra Drive, Delray Beach, FL 33484</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <div class="detail-label">Bedrooms</div>
+                        <div class="detail-value">4</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Bathrooms</div>
+                        <div class="detail-value">6</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-value">Royal Hidden Cove</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">MLS#</div>
+                        <div class="detail-value">RX-11136515</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <h3>SAMANTHA GORNSTEIN</h3>
+            <p style="margin-bottom: 10px;">Douglas Elliman Real Estate</p>
+            <p style="font-size: 14px; color: #e6f2ff;">Your Polo Club Luxury Real Estate Specialist</p>
+            <div class="contact-buttons">
+                <a href="tel:+15617076607" class="contact-btn">561-707-6607</a>
+                <a href="mailto:samantha@bogenhomes.com" class="contact-btn">samantha@bogenhomes.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
