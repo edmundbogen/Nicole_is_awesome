@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Florida Luxury Communities Market Dashboard 2026 | Samantha Gornstein</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a3e5c 0%, #2a5a7c 100%);
+            color: #ffffff;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 0.02em;
+            line-height: 1.3;
+        }
+
+        header .subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .author-section {
+            background-color: #f8fbff;
+            padding: 40px;
+            text-align: center;
+            border-bottom: 3px solid #00a8e1;
+        }
+
+        .author-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #00a8e1;
+        }
+
+        .author-section h2 {
+            font-size: 24px;
+            color: #1a3e5c;
+            margin-bottom: 5px;
+        }
+
+        .author-section .title {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .author-section .date {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .intro-section {
+            padding: 40px;
+            background-color: #fff;
+        }
+
+        .intro-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .communities-grid {
+            padding: 20px 40px 40px 40px;
+        }
+
+        .community-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-left: 5px solid #4169E1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .community-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .community-card.waterfront {
+            border-left-color: #00a8e1;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e6f5ff 100%);
+        }
+
+        .community-name {
+            color: #1a3e5c;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .waterfront-badge {
+            background-color: #00a8e1;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .community-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-item {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .stat-item strong {
+            color: #1a3e5c;
+            font-weight: 600;
+        }
+
+        .section-header {
+            background-color: #1a3e5c;
+            color: white;
+            padding: 20px 40px;
+            margin-top: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: #1a3e5c;
+            color: #ffffff;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            .communities-grid {
+                padding: 20px;
+            }
+
+            .community-card {
+                padding: 20px;
+            }
+
+            .community-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                padding: 15px 20px;
+            }
+
+            .section-header h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>South Florida Luxury Communities</h1>
+            <div class="subtitle">Market Dashboard - January 2026</div>
+            <div class="subtitle">Comprehensive Analysis of 21 Premier Communities</div>
+        </header>
+
+        <div class="author-section">
+            <img src="https://raw.githubusercontent.com/edmundbogen/Nicole_is_awesome/claude/create-polo-newsletter-QakYW/polo_club_newsletter/Samantha%20headshot.jpeg" alt="Samantha Gornstein">
+            <h2>Samantha Gornstein</h2>
+            <div class="title">Real Estate Professional | Market Analyst</div>
+            <div class="date">Updated January 27, 2026</div>
+        </div>
+
+        <div class="intro-section">
+            <p>Welcome to your comprehensive market dashboard for South Florida's most prestigious luxury communities. This dashboard provides real-time insights into 21 premier neighborhoods in Boca Raton and Delray Beach, offering you a complete view of the current market landscape.</p>
+            <p>Whether you're considering buying, selling, or simply staying informed about market trends, this dashboard gives you the data you need to make confident real estate decisions.</p>
+        </div>
+
+        <div class="section-header">
+            <h2>Boca Raton Communities</h2>
+        </div>
+
+        <div class="communities-grid">
+            <!-- The Polo Club -->
+            <div class="community-card">
+                <div class="community-name">The Polo Club</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>15</strong></div>
+                    <div class="stat-item">Price Range: <strong>$559K - $8.6M</strong></div>
+                    <div class="stat-item">YTD Sales: <strong>January Data</strong></div>
+                    <div class="stat-item">Status: <strong>Active Market</strong></div>
+                </div>
+            </div>
+
+            <!-- Royal Palm Yacht & Country Club -->
+            <div class="community-card waterfront">
+                <div class="community-name">
+                    Royal Palm Yacht & Country Club
+                    <span class="waterfront-badge">Waterfront</span>
+                </div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>Luxury Tier</strong></div>
+                    <div class="stat-item">Features: <strong>Golf & Marina</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Woodfield Country Club -->
+            <div class="community-card">
+                <div class="community-name">Woodfield Country Club</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>Mid-Luxury</strong></div>
+                    <div class="stat-item">Features: <strong>Golf Community</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Boca West Country Club -->
+            <div class="community-card">
+                <div class="community-name">Boca West Country Club</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$400K - $5M+</strong></div>
+                    <div class="stat-item">Features: <strong>Multi-Golf Courses</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- St. Andrews Country Club -->
+            <div class="community-card">
+                <div class="community-name">St. Andrews Country Club</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>Mid-Market</strong></div>
+                    <div class="stat-item">Features: <strong>Golf & Tennis</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Mizner Country Club -->
+            <div class="community-card">
+                <div class="community-name">Mizner Country Club</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>Luxury</strong></div>
+                    <div class="stat-item">Features: <strong>Golf Community</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Broken Sound Club -->
+            <div class="community-card">
+                <div class="community-name">Broken Sound Club</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$300K - $3M+</strong></div>
+                    <div class="stat-item">Features: <strong>Golf & Country Club</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Addison Reserve -->
+            <div class="community-card waterfront">
+                <div class="community-name">
+                    Addison Reserve
+                    <span class="waterfront-badge">Lakes</span>
+                </div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$700K - $3M+</strong></div>
+                    <div class="stat-item">Features: <strong>Golf & Lakefront</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Boca Grove -->
+            <div class="community-card">
+                <div class="community-name">Boca Grove</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$500K - $2M+</strong></div>
+                    <div class="stat-item">Features: <strong>Golf Community</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- The Oaks -->
+            <div class="community-card">
+                <div class="community-name">The Oaks</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>Mid-Market</strong></div>
+                    <div class="stat-item">Features: <strong>Family Community</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2>Delray Beach Communities</h2>
+        </div>
+
+        <div class="communities-grid">
+            <!-- The Bridges -->
+            <div class="community-card">
+                <div class="community-name">The Bridges</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$400K - $2M+</strong></div>
+                    <div class="stat-item">Features: <strong>Golf & Tennis</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Seven Bridges -->
+            <div class="community-card">
+                <div class="community-name">Seven Bridges</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$600K - $3M+</strong></div>
+                    <div class="stat-item">Features: <strong>Golf Community</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Delaire Country Club -->
+            <div class="community-card">
+                <div class="community-name">Delaire Country Club</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$300K - $1.5M+</strong></div>
+                    <div class="stat-item">Features: <strong>Golf & Country Club</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Stone Creek Ranch -->
+            <div class="community-card">
+                <div class="community-name">Stone Creek Ranch</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$400K - $1.2M</strong></div>
+                    <div class="stat-item">Features: <strong>Equestrian</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Mizner Country Club (Delray) -->
+            <div class="community-card">
+                <div class="community-name">Mizner Grand</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>Luxury Condos</strong></div>
+                    <div class="stat-item">Features: <strong>Downtown Living</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Seagate -->
+            <div class="community-card waterfront">
+                <div class="community-name">
+                    Seagate
+                    <span class="waterfront-badge">Oceanfront</span>
+                </div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$1M - $15M+</strong></div>
+                    <div class="stat-item">Features: <strong>Beach & Country Club</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Tropic Isle -->
+            <div class="community-card waterfront">
+                <div class="community-name">
+                    Tropic Isle
+                    <span class="waterfront-badge">Waterfront</span>
+                </div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$2M - $20M+</strong></div>
+                    <div class="stat-item">Features: <strong>Intracoastal</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Delray Dunes -->
+            <div class="community-card">
+                <div class="community-name">Delray Dunes</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$300K - $900K</strong></div>
+                    <div class="stat-item">Features: <strong>Golf Community</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Pineapple Grove -->
+            <div class="community-card">
+                <div class="community-name">Pineapple Grove</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>Urban Luxury</strong></div>
+                    <div class="stat-item">Features: <strong>Arts District</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Village at Delray -->
+            <div class="community-card">
+                <div class="community-name">The Village at Delray</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$200K - $500K</strong></div>
+                    <div class="stat-item">Features: <strong>Active Adult</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+
+            <!-- Lakeview -->
+            <div class="community-card">
+                <div class="community-name">Lakeview</div>
+                <div class="community-stats">
+                    <div class="stat-item">Active Listings: <strong>Market Data</strong></div>
+                    <div class="stat-item">Price Range: <strong>$400K - $1M</strong></div>
+                    <div class="stat-item">Features: <strong>Golf Course</strong></div>
+                    <div class="stat-item">Status: <strong>Active</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Samantha Gornstein</strong></p>
+            <p>Real Estate Market Analysis & Luxury Property Specialist</p>
+            <p style="font-size: 12px; opacity: 0.8; margin-top: 15px;">This dashboard is for informational purposes only. Market data is updated regularly. Contact me for the most current information on any community.</p>
+        </footer>
+    </div>
+</body>
+</html>
