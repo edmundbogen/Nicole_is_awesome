@@ -82,9 +82,6 @@
         .listing-card.waterfront {
             border-left-color: #28a745;
         }
-        .listing-card.new-construction {
-            border-left-color: #dc3545;
-        }
         .listing-address {
             color: #1a3e5c;
             font-size: 1.4em;
@@ -108,9 +105,21 @@
             background: #d4edda;
             color: #155724;
         }
-        .badge-new {
+        .badge-type {
             background: #f8d7da;
             color: #721c24;
+        }
+        .badge-price-reduced {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .badge-new-listing {
+            background: #cce5ff;
+            color: #004085;
+        }
+        .badge-back-on-market {
+            background: #d1ecf1;
+            color: #0c5460;
         }
         .listing-price {
             color: #000000;
@@ -149,6 +158,11 @@
             font-weight: 500;
             margin-top: 10px;
             letter-spacing: 0.05em;
+        }
+        .listing-sub {
+            color: #666;
+            font-size: 0.85em;
+            margin-top: 5px;
         }
         .view-listing-btn {
             background: #00a8e1;
@@ -205,138 +219,199 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-button">← Back to Market Dashboard</a>
+        <a href="polo-club-newsletter.html" class="back-button">&larr; Back to Newsletter</a>
 
         <div class="header">
-            <p style="color: #dc3545; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px;">Special Report | February 7, 2025</p>
+            <p style="color: #dc3545; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px;">Special Report | February 16, 2026</p>
             <h1>Polo Club - Available Listings</h1>
-            <p class="header-subtitle">9 Active Listings</p>
+            <p class="header-subtitle">13 Active Listings</p>
         </div>
 
         <div class="summary-stats">
             <div class="summary-stat">
                 <div class="summary-stat-label">Price Range</div>
-                <div class="summary-stat-value">$559K - $8.6M</div>
+                <div class="summary-stat-value">$499K - $8.6M</div>
             </div>
             <div class="summary-stat">
                 <div class="summary-stat-label">Active Listings</div>
-                <div class="summary-stat-value">9</div>
+                <div class="summary-stat-value">13</div>
             </div>
             <div class="summary-stat">
-                <div class="summary-stat-label">Sold YTD</div>
-                <div class="summary-stat-value">7</div>
+                <div class="summary-stat-label">Property Types</div>
+                <div class="summary-stat-value">SF / TH / Condo</div>
             </div>
             <div class="summary-stat">
-                <div class="summary-stat-label">Absorption Rate</div>
-                <div class="summary-stat-value">Active</div>
+                <div class="summary-stat-label">Communities</div>
+                <div class="summary-stat-value">8</div>
             </div>
         </div>
 
-        <!-- Listing 1: Highest Price -->
-        <div class="listing-card">
+        <!-- Listing 1: $8,600,000 -->
+        <div class="listing-card waterfront">
             <div class="listing-info">
-                <div class="listing-address">16600 Senterra Drive, Delray Beach</div>
+                <div class="listing-address">16600 Senterra Drive, Delray Beach <span class="listing-badge badge-waterfront">Waterfront</span></div>
                 <div class="listing-price">$8,600,000</div>
-                <div class="listing-mls">MLS#: RX-11136515 | 7 BD / 6 BA / 6,069 SF</div>
+                <div class="listing-sub">Royal Hidden Cove / Polo Club &bull; Single Family &bull; Built 2026</div>
+                <div class="listing-mls">MLS#: RX-11136515 | 7 BD / 6 BA / 6,069 SF | DOM: 109</div>
             </div>
             <div class="listing-cta">
                 <a href="https://bogenhomes.com/homes-for-sale-details/16600-SENTERRA-DRIVE-DELRAY-BEACH-FL-33484/RX-11136515/43/" target="_blank" class="view-listing-btn">View Details</a>
             </div>
         </div>
 
-        <!-- Listing 2 -->
-        <div class="listing-card">
+        <!-- Listing 2: $7,775,000 -->
+        <div class="listing-card waterfront">
             <div class="listing-info">
-                <div class="listing-address">16670 Senterra Drive, Delray Beach</div>
+                <div class="listing-address">16670 Senterra Drive, Delray Beach <span class="listing-badge badge-waterfront">Waterfront</span></div>
                 <div class="listing-price">$7,775,000</div>
-                <div class="listing-mls">MLS#: RX-11129141 | 4 BD / 4 BA / 4,394 SF</div>
+                <div class="listing-sub">Royal Hidden Cove / Polo Club &bull; Single Family &bull; Built 1991</div>
+                <div class="listing-mls">MLS#: RX-11129141 | 4 BD / 5 BA / 4,394 SF | DOM: 125</div>
             </div>
             <div class="listing-cta">
                 <a href="https://bogenhomes.com/homes-for-sale-details/16670-SENTERRA-DRIVE-DELRAY-BEACH-FL-33484/RX-11129141/43/" target="_blank" class="view-listing-btn">View Details</a>
             </div>
         </div>
 
-        <!-- Listing 3 -->
-        <div class="listing-card">
+        <!-- Listing 3: $2,100,000 -->
+        <div class="listing-card waterfront">
             <div class="listing-info">
-                <div class="listing-address">6468 Polo Pointe Way, Delray Beach</div>
-                <div class="listing-price">$1,799,000</div>
-                <div class="listing-mls">MLS#: RX-11148746 | 4 BD / 3 BA / 3,202 SF</div>
+                <div class="listing-address">5537 Steeple Chase, Boca Raton <span class="listing-badge badge-waterfront">Waterfront</span> <span class="listing-badge badge-back-on-market">Back on Market</span></div>
+                <div class="listing-price">$2,100,000</div>
+                <div class="listing-sub">Steeple Chase / Polo Club &bull; Single Family &bull; Built 1987</div>
+                <div class="listing-mls">MLS#: RX-11157480 | 3 BD / 3 BA / 2,477 SF | DOM: 9</div>
+            </div>
+            <div class="listing-cta">
+                <a href="https://bogenhomes.com/homes-for-sale-details/5537-STEEPLE-CHASE-BOCA-RATON-FL-33496/RX-11157480/43/" target="_blank" class="view-listing-btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Listing 4: $1,749,000 -->
+        <div class="listing-card waterfront">
+            <div class="listing-info">
+                <div class="listing-address">6468 Polo Pointe Way, Delray Beach <span class="listing-badge badge-waterfront">Waterfront</span></div>
+                <div class="listing-price">$1,749,000</div>
+                <div class="listing-sub">Crystal Bay / Polo Club &bull; Single Family &bull; Built 2002</div>
+                <div class="listing-mls">MLS#: RX-11148746 | 4 BD / 3 BA / 3,202 SF | DOM: 52</div>
             </div>
             <div class="listing-cta">
                 <a href="https://bogenhomes.com/homes-for-sale-details/6468-POLO-POINTE-WAY-DELRAY-BEACH-FL-33484/RX-11148746/43/" target="_blank" class="view-listing-btn">View Details</a>
             </div>
         </div>
 
-        <!-- Listing 4 - Townhome -->
+        <!-- Listing 5: $1,125,000 -->
         <div class="listing-card">
             <div class="listing-info">
-                <div class="listing-address">6237 San Michel Way, Delray Beach <span class="listing-badge badge-new">Townhome</span></div>
+                <div class="listing-address">5061 Via De Amalfi Drive, Boca Raton <span class="listing-badge badge-price-reduced">Price Reduced</span></div>
+                <div class="listing-price">$1,125,000</div>
+                <div class="listing-sub">Ville De Capri / Polo Club &bull; Single Family &bull; Built 1986</div>
+                <div class="listing-mls">MLS#: RX-11161677 | 3 BD / 3 BA / 1,744 SF | DOM: 9</div>
+            </div>
+            <div class="listing-cta">
+                <a href="https://bogenhomes.com/homes-for-sale-details/5061-VIA-DE-AMALFI-DRIVE-BOCA-RATON-FL-33496/RX-11161677/43/" target="_blank" class="view-listing-btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Listing 6: $995,000 - Townhouse -->
+        <div class="listing-card">
+            <div class="listing-info">
+                <div class="listing-address">6237 San Michel Way, Delray Beach <span class="listing-badge badge-type">Townhouse</span></div>
                 <div class="listing-price">$995,000</div>
-                <div class="listing-mls">MLS#: RX-11159006 | 3 BD / 2 BA / 2,366 SF</div>
+                <div class="listing-sub">Portofino / Polo Club &bull; Townhouse &bull; Built 1990</div>
+                <div class="listing-mls">MLS#: RX-11159006 | 3 BD / 2 BA / 2,366 SF | DOM: 18</div>
             </div>
             <div class="listing-cta">
                 <a href="https://bogenhomes.com/homes-for-sale-details/6237-SAN-MICHEL-WAY-DELRAY-BEACH-FL-33484/RX-11159006/43/" target="_blank" class="view-listing-btn">View Details</a>
             </div>
         </div>
 
-        <!-- Listing 5 - Condo -->
+        <!-- Listing 7: $995,000 - Townhouse -->
         <div class="listing-card">
             <div class="listing-info">
-                <div class="listing-address">17629 Ashbourne Way A, Boca Raton <span class="listing-badge badge-new">Condo</span></div>
+                <div class="listing-address">5097 Windsor Parke Drive, Boca Raton <span class="listing-badge badge-type">Townhouse</span> <span class="listing-badge badge-new-listing">New Listing</span></div>
+                <div class="listing-price">$995,000</div>
+                <div class="listing-sub">Windsor Parke / Polo Club &bull; Townhouse &bull; Built 1989</div>
+                <div class="listing-mls">MLS#: RX-11162920 | 3 BD / 2 BA / 1,623 SF | DOM: 5</div>
+            </div>
+            <div class="listing-cta">
+                <a href="https://bogenhomes.com/homes-for-sale-details/5097-WINDSOR-PARKE-DRIVE-BOCA-RATON-FL-33496/RX-11162920/43/" target="_blank" class="view-listing-btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Listing 8: $949,000 - Condo -->
+        <div class="listing-card">
+            <div class="listing-info">
+                <div class="listing-address">17629 Ashbourne Way A, Boca Raton <span class="listing-badge badge-type">Condo</span></div>
                 <div class="listing-price">$949,000</div>
-                <div class="listing-mls">MLS#: RX-11158266 | 3 BD / 2 BA / 1,867 SF</div>
+                <div class="listing-sub">Ashbourne / Polo Club &bull; Condo &bull; Built 1987</div>
+                <div class="listing-mls">MLS#: RX-11158266 | 3 BD / 2 BA / 1,867 SF | DOM: 20</div>
             </div>
             <div class="listing-cta">
                 <a href="https://bogenhomes.com/homes-for-sale-details/17629-ASHBOURNE-WAY-A-BOCA-RATON-FL-33496/RX-11158266/43/" target="_blank" class="view-listing-btn">View Details</a>
             </div>
         </div>
 
-        <!-- Listing 6 - Townhome -->
+        <!-- Listing 9: $730,000 - Townhouse -->
         <div class="listing-card">
             <div class="listing-info">
-                <div class="listing-address">5158 Windsor Parke Drive, Boca Raton <span class="listing-badge badge-new">Townhome</span></div>
+                <div class="listing-address">5158 Windsor Parke Drive, Boca Raton <span class="listing-badge badge-type">Townhouse</span></div>
                 <div class="listing-price">$730,000</div>
-                <div class="listing-mls">MLS#: RX-11100001 | 3 BD / 2 BA / 1,760 SF</div>
+                <div class="listing-sub">Windsor Parke / Polo Club &bull; Townhouse &bull; Built 1989</div>
+                <div class="listing-mls">MLS#: RX-11100001 | 3 BD / 2 BA / 1,760 SF | DOM: 244</div>
             </div>
             <div class="listing-cta">
                 <a href="https://bogenhomes.com/homes-for-sale-details/5158-WINDSOR-PARKE-DRIVE-BOCA-RATON-FL-33496/RX-11100001/43/" target="_blank" class="view-listing-btn">View Details</a>
             </div>
         </div>
 
-        <!-- Listing 7 - Waterfront Condo -->
-        <div class="listing-card waterfront">
+        <!-- Listing 10: $629,000 - Condo -->
+        <div class="listing-card">
             <div class="listing-info">
-                <div class="listing-address">5184 Lake Catalina Drive D, Boca Raton <span class="listing-badge badge-waterfront">Waterfront</span></div>
+                <div class="listing-address">5184 Lake Catalina Drive D, Boca Raton <span class="listing-badge badge-type">Condo</span></div>
                 <div class="listing-price">$629,000</div>
-                <div class="listing-mls">MLS#: RX-11131133 | 3 BD / 2 BA / 2,053 SF</div>
+                <div class="listing-sub">Catalina / Polo Club &bull; Condo &bull; Built 1989</div>
+                <div class="listing-mls">MLS#: RX-11131133 | 3 BD / 2 BA / 2,053 SF | DOM: 129</div>
             </div>
             <div class="listing-cta">
                 <a href="https://bogenhomes.com/homes-for-sale-details/5184-LAKE-CATALINA-DRIVE-D-BOCA-RATON-FL-33496/RX-11131133/43/" target="_blank" class="view-listing-btn">View Details</a>
             </div>
         </div>
 
-        <!-- Listing 8 - Waterfront Condo -->
-        <div class="listing-card waterfront">
+        <!-- Listing 11: $599,000 - Condo -->
+        <div class="listing-card">
             <div class="listing-info">
-                <div class="listing-address">5070 Lake Catalina Drive C, Boca Raton <span class="listing-badge badge-waterfront">Waterfront</span></div>
+                <div class="listing-address">5070 Lake Catalina Drive C, Boca Raton <span class="listing-badge badge-type">Condo</span></div>
                 <div class="listing-price">$599,000</div>
-                <div class="listing-mls">MLS#: RX-11152072 | 3 BD / 2 BA / 1,751 SF</div>
+                <div class="listing-sub">Catalina / Polo Club &bull; Condo &bull; Built 1989</div>
+                <div class="listing-mls">MLS#: RX-11152072 | 3 BD / 2 BA / 1,751 SF | DOM: 40</div>
             </div>
             <div class="listing-cta">
                 <a href="https://bogenhomes.com/homes-for-sale-details/5070-LAKE-CATALINA-DRIVE-C-BOCA-RATON-FL-33496/RX-11152072/43/" target="_blank" class="view-listing-btn">View Details</a>
             </div>
         </div>
 
-        <!-- Listing 9 - Waterfront Condo - Entry Point -->
-        <div class="listing-card waterfront">
+        <!-- Listing 12: $499,999 - Condo -->
+        <div class="listing-card">
             <div class="listing-info">
-                <div class="listing-address">5100 Lake Catalina Drive C, Boca Raton <span class="listing-badge badge-waterfront">Waterfront</span></div>
-                <div class="listing-price">$559,000</div>
-                <div class="listing-mls">MLS#: RX-11139065 | 3 BD / 2 BA / 2,107 SF</div>
+                <div class="listing-address">5100 Lake Catalina Drive C, Boca Raton <span class="listing-badge badge-type">Condo</span> <span class="listing-badge badge-price-reduced">Price Reduced</span></div>
+                <div class="listing-price">$499,999</div>
+                <div class="listing-sub">Catalina / Polo Club &bull; Condo &bull; Built 1989</div>
+                <div class="listing-mls">MLS#: RX-11139065 | 3 BD / 2 BA / 2,107 SF | DOM: 101</div>
             </div>
             <div class="listing-cta">
                 <a href="https://bogenhomes.com/homes-for-sale-details/5100-LAKE-CATALINA-DRIVE-C-BOCA-RATON-FL-33496/RX-11139065/43/" target="_blank" class="view-listing-btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Listing 13: $499,000 - Condo -->
+        <div class="listing-card">
+            <div class="listing-info">
+                <div class="listing-address">5160 Lake Catalina Drive C, Boca Raton <span class="listing-badge badge-type">Condo</span> <span class="listing-badge badge-new-listing">New Listing</span></div>
+                <div class="listing-price">$499,000</div>
+                <div class="listing-sub">Catalina / Polo Club &bull; Condo &bull; Built 1989</div>
+                <div class="listing-mls">MLS#: RX-11162986 | 2 BD / 2 BA / 1,837 SF | DOM: 4</div>
+            </div>
+            <div class="listing-cta">
+                <a href="https://bogenhomes.com/homes-for-sale-details/5160-LAKE-CATALINA-DRIVE-C-BOCA-RATON-FL-33496/RX-11162986/43/" target="_blank" class="view-listing-btn">View Details</a>
             </div>
         </div>
 
